@@ -22,6 +22,11 @@ public class UserLoginTest extends BaseTest{
 
     }
     @Test
+    public void verifyUserLoginTest(){
+        UserLoginPage loginPage = page.getInstance(UserLoginPage.class);
+        Assert.assertTrue(loginPage.getTitle().contains("Swag Labs"));
+    }
+    @Test
     public void loginShouldFailWithoutUserName(){
         UserLoginPage userLoginPage = page.getInstance(UserLoginPage.class)
                 .doLogin("secret_sauce");
