@@ -12,7 +12,7 @@ public class ProductTest extends BaseTest{
                 .doLogin("standard_user","secret_sauce")
                 .clickNaviGateBtn()
                 .clickAboutPage()
-                .ClickProductPage();
+                .clickProductPage();
         Assert.assertTrue(productPage.hasProductCompleteTest());
     }
 }

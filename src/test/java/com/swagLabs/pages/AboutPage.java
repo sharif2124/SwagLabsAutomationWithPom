@@ -10,19 +10,19 @@ public class AboutPage extends BasePage{
     public boolean hasAboutCompleteTest(){
       return   getWebElements(By.className("MuiToolbar-root")).size()>0;
     }
-    public PricePage ClickpricePage(){
+    public PricePage clickpricePage(){
         getWebElement(By.linkText("Pricing")).click();
         return getInstance(PricePage.class);
     }
-    public ProductPage ClickProductPage(){
+    public ProductPage clickProductPage(){
         getWebElement(By.linkText("Products")).click();
         return getInstance(ProductPage.class);
     }
-    public SignInPage ClickSignInPage(){
+    public SignInPage clickSignInPage(){
         getWebElement(By.linkText("Sign in")).click();
         return getInstance(SignInPage.class);
     }
-    public RequestDemoPage ClickRequestDemoPage(){
+    public RequestDemoPage clickRequestDemoPage(){
         getWebElement(By.linkText("Request a demo")).click();
         return getInstance(RequestDemoPage.class);
     }

@@ -12,7 +12,7 @@ public class PriceTest extends BaseTest{
                 .doLogin("standard_user","secret_sauce")
                 .clickNaviGateBtn()
                 .clickAboutPage()
-                .ClickpricePage();
+                .clickpricePage();
         Assert.assertTrue(pricePage.hasPriceCompleteTest());
     }
 }

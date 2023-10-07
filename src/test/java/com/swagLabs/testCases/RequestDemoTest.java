@@ -12,7 +12,7 @@ public class RequestDemoTest extends BaseTest{
                 .doLogin("standard_user","secret_sauce")
                 .clickNaviGateBtn()
                 .clickAboutPage()
-                .ClickRequestDemoPage();
+                .clickRequestDemoPage();
         Assert.assertTrue(requestDemoPage.RequestDemoPageHasSuccess());
     }
 }

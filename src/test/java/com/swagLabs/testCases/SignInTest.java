@@ -12,7 +12,7 @@ public class SignInTest extends BaseTest{
                 .doLogin("standard_user","secret_sauce")
                 .clickNaviGateBtn()
                 .clickAboutPage()
-                .ClickSignInPage();
+                .clickSignInPage();
         Assert.assertFalse(signInPage.hasSignInCompleteTest());
     }
 }
