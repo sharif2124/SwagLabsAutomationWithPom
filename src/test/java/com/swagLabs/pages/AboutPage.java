@@ -1,7 +1,12 @@
 package com.swagLabs.pages;
 
+import com.swagLabs.util.General;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
 
 public class AboutPage extends BasePage{
     public AboutPage(WebDriver driver) {
@@ -15,7 +20,11 @@ public class AboutPage extends BasePage{
         return getInstance(PricePage.class);
     }
     public ProductPage clickProductPage(){
-        getWebElement(By.linkText("Products")).click();
+      WebElement icons = getWebElements(By.cssSelector("img[src$='double-chevron.svg']")).get(0);
+      //For Move to Mouse Hover
+        new Actions(driver).moveToElement(icons).build().perform();
+        General.waitForDomStable();
+        getWebElement(By.linkText("Platform for Test")).click();
         return getInstance(ProductPage.class);
     }
     public SignInPage clickSignInPage(){

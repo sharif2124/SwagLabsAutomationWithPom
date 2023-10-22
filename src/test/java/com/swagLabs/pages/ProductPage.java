@@ -10,4 +10,5 @@ public class ProductPage extends BasePage{
     public boolean hasProductCompleteTest(){
         return getWebElements(By.id("__next")).size()>0;
     }
+
 }
